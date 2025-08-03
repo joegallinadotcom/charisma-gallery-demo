@@ -1,0 +1,218 @@
+#logout-button {
+  grid-area: logout;
+  justify-items: center;
+}
+
+.newWorksFormDiv {
+  display: grid;
+  grid-template-areas:
+    "yearDivNew yearDivNew displayDivNew displayDivNew orderDivNew orderDivNew"
+    "titleDivNew titleDivNew titleDivNew titleDivNew titleDivNew titleDivNew"
+    "mediumDivNew mediumDivNew mediumDivNew mediumDivNew mediumDivNew mediumDivNew"
+    "dimensionsDivNew dimensionsDivNew dimensionsDivNew dimensionsDivNew dimensionsDivNew dimensionsDivNew"
+    "statementDivNew statementDivNew statementDivNew statementDivNew statementDivNew statementDivNew"
+    "imageDivNew imageDivNew imageDivNew imageDivNew controlsDivNew controlsDivNew"
+    "imageDivNew imageDivNew imageDivNew imageDivNew controlsDivNew controlsDivNew";
+  text-align: left;
+  max-width: 500px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: dashed 3px darkgray;
+  box-sizing: border-box;
+}
+
+.content-admin {
+  text-align: left;
+  padding: 5px;
+  margin: 2.5px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.worksForm-admin {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto 1fr repeat(10, auto);
+  grid-template-areas:
+    "img img img img img img"
+    "spacer spacer spacer spacer spacer spacer"
+    "id id id id controls controls"
+    "posted posted posted posted controls controls"
+    "updated updated updated updated controls controls"
+    "year year display display order order"
+    "title title title title title title"
+    "medium medium medium medium medium medium"
+    "dimensions dimensions dimensions dimensions dimensions dimensions"
+    "statement statement statement statement statement statement"
+    "primary primary primary primary primary primary"
+    "detail detail detail detail detail detail";
+  max-width: 500px;
+  overflow-x: auto;
+}
+
+.imgDiv-admin {
+  display: grid;
+  grid-area: img;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "primaryDiv"
+    "detailDiv";
+  align-self: center;
+  justify-self: center;
+  object-fit: contain;
+  min-height: 350px;
+  max-width: 100%;
+}
+
+.saveNewBtn {
+  height: 75px;
+  width: 100px;
+}
+
+#yearDivNew {
+  grid-area: yearDivNew;
+}
+
+#displayDivNew {
+  grid-area: displayDivNew;
+  text-align: center;
+}
+
+#orderDivNew {
+  grid-area: orderDivNew;
+  text-align: right;
+}
+
+#controlsDivNew {
+  grid-area: controlsDivNew;
+  text-align: right;
+}
+
+#titleDivNew {
+  grid-area: titleDivNew;
+}
+
+#mediumDivNew {
+  grid-area: mediumDivNew;
+}
+
+#dimensionsDivNew {
+  grid-area: dimensionsDivNew;
+}
+
+#statementDivNew {
+  grid-area: statementDivNew;
+}
+
+#imageDivNew {
+  grid-area: imageDivNew;
+}
+
+.primaryDiv {
+  align-content: center;
+}
+
+.detailDiv {
+  display: flex;
+  flex-shrink: 0;
+  object-fit: contain;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.detailDiv > * {
+  scroll-snap-align: end;
+}
+
+.detailImg.multiple {
+  margin: 4px;
+}
+
+.detail {
+  grid-area: detail;
+}
+
+.primary {
+  grid-area: primary;
+}
+
+input.primary,
+input.detail {
+  border: 1px solid lightgrey;
+}
+
+#titleDivNew .title,
+#mediumDivNew .medium,
+#dimensionsDivNew .dimensions,
+#statementDivNew .statement,
+#imageDivNew .primary,
+#imageDivNew .detail {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#about-text {
+  height: 90%;
+  width: 90%;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  padding-top: 20vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid grey;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  width: 50vw;
+}
+
+.modal-content > .message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.cancel,
+.confirmation {
+  display: none;
+  color: darkgrey;
+  float: right;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cancel:hover,
+.cancel:focus {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.confirmation:hover,
+.confirmation:focus {
+  color: green;
+  text-decoration: underline;
+  cursor: pointer;
+}
