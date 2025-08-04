@@ -28,6 +28,9 @@ To create a extremely simple but powerful, user-friendly, "set it and forget it"
 - [x] SQL-based session tracking, password hashing, and authentication mechanisms allow for login / logout functionality that keeps your administrative interface secure.
 - [x] All elements, colors, positions, displays, etc. are fully customizeable by me (Joe Gallina) at the time of setup.  Background images, gradients, and overall look-and-feel is completely up to you!
 
+## Notes
+- This Demo is a stripped-down version of the full Charisma Gallery functionality.  Key SQL commands, routes, scripts, and functions have been disabled in one way or another, to prevent abuse to the Demo.  Much of the disabled code is present in this codebase&mdash;but simply "commented out"&mdash;to allow for viewing.
+
 ## Screenshots 
 <img src="http://joegallina.com/portfolio/img/charisma-demo.png" alt="Screenshot of the Charisma Gallery Demo featured on JoeGallina.com" width="400">
 
